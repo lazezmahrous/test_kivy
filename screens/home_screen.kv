@@ -1,0 +1,72 @@
+<Homescreen>:
+    MDBoxLayout:
+        size_hint: 1,1
+        # padding: ('30dp', '30dp', '30dp', '30dp')
+        # spacing: '10dp'
+        MDFloatLayout:
+            MDBottomNavigation:
+                # panel_color: "white"
+                # text_color_active: "black"
+                # text_color_normal:"darkgrey"
+                font_name:'fonts/Poppins-SemiBold.ttf'
+                font_size:'10sp'
+                MDBottomNavigationItem:
+                    name: 'screen 1'
+                    text: 'Flash Timeing'
+                    icon: 'icons/time.png'
+                    theme_text_color:'Custom'
+                    icon_color:"#ffffff"
+                    text_color:"#ffffff"
+                    badge_icon: "numeric-10"
+                    
+                    Flashtiming:
+                        Header:
+
+                MDBottomNavigationItem:
+                    name: 'screen 2'
+                    text: '1VS1'
+                    icon: 'icons/1vs1.png'
+                    icon_size:20
+                    badge_icon: 'numeric-5'
+
+                    Header:
+
+                MDBottomNavigationItem:
+                    name: 'screen 3'
+                    text: 'Counter'
+                    icon: 'icons/abacus (1).png'
+
+                    MDBoxLayout:
+                        size_hint:1,1
+                        MDFloatLayout:
+                            MDTextField:
+                                id: text_field_url
+                                mode:'rectangle'
+                                pos_hint: {'center_x': 0.48,'center_y': 0.7}
+                                size_hint_x:.8
+                                size_hint_y:.1
+                                hint_text:"Facebook Url : "
+                                hint_text_font_size:'10sp'
+                                font_name:'fonts/Poppins-Regular.ttf'
+                                font_size:'10sp'
+                                # on_focus:
+                            MDIconButton:
+                                icon: "magnify"
+                                text: "GET"
+                                theme_text_color: "Custom"
+                                text_color: "white"
+                                pos_hint: {'center_x': 0.89,"center_y": .693}
+                                md_bg_color: "#4b00c6"
+                                # pos: text_field_tow.width - self.width + dp(50), 0
+                                line_color:"#ffffff"
+                                theme_icon_color: "Custom"
+                                icon_color: "white"
+                                # size_hint_y: .095
+                                # on_release: root.urlget()
+                            # MDRectangleFlatIconButton:
+                            #     icon:"magnify"
+                            #     pos_hint: {"center_y": .695}
+                            #     pos: text_field_tow.width - self.width + dp(30), 0
+                            MDRaisedButton:
+                                text:"Dowenload"
+                                pos_hint: {'center_x': 0.5,'center_y': 0.3}

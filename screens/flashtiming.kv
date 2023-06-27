@@ -1,0 +1,114 @@
+<Flashtiming>:
+    MDBoxLayout:
+        # pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+        size_hint: (1,1)
+        radius: [0, 0, 25, 25]
+        # md_bg_color: "#f0f3f8"
+        padding: ('15dp', '0dp', '0dp', '0dp')
+        orientation: 'vertical'
+        MDFloatLayout:
+            MDLabel:
+                text:"Flash Timing"
+                font_size: "20sp"
+                # size_hint_x:.9
+                line_height: .8
+                pos_hint: {'center_x': 0.5,'center_y': .59}
+                # font_name: "Poppins-SemiBold.ttf"
+            MDLabel:
+                text:"Number Of Digits"
+                font_size: "20sp"
+                # size_hint_x:.9
+                line_height: .8
+                pos_hint: {'center_x': 0.5,'center_y': .4}
+                # font_name: "Poppins-SemiBold.ttf"
+            # MDSeparator:
+            #     # height: dp(3)
+            #     radius: [10, 10, 10, 10]
+            #     size_hint:(3,.015)
+            #     pos_hint: {'center_y': 0.8}
+            MDLabel:
+                text:"Operation"
+                font_size: "20sp"
+                # size_hint_x:.9
+                line_height: .8
+                pos_hint: {'center_x': 0.5,'center_y': .22}
+                # font_name: "Poppins-SemiBold.ttf"
+            MDCard:
+                elevation: 1.6
+                border_radius: 15
+                radius: [15]
+                size_hint: None, None
+                pos_hint: {'center_x': 0.8,'center_y': .59}
+                size: (dp(120), dp(35))
+                # padding: ('1dp', '60dp', '1dp', '50dp')
+                MDGridLayout:
+                    cols: 3
+                    MDBoxLayout:
+                        adaptive_width: True
+                        MDIconButton:
+                            icon: 'minus'
+                            pos_hint: {'center_y': .5, 'center_x': .5}
+                            on_press:root.decrement_counter_one()
+                    MDLabel:
+                        id: counter_label_one
+                        font_style: 'Subtitle2'
+                        text: '0'
+                        halign: 'center'
+                    MDBoxLayout:
+                        adaptive_width: True
+                        MDIconButton:
+                            icon: 'plus'
+                            pos_hint: {'center_y': .5, 'center_x': .5}
+                            on_press:root.increment_counter_one()
+            MDCard:
+                elevation: 1.6
+                border_radius: 15
+                radius: [15]
+                size_hint: None, None
+                pos_hint: {'center_x': 0.8,'center_y': .4}
+                size:(dp(120), dp(35))
+                MDGridLayout:
+                    cols: 3
+                    MDBoxLayout:
+                        adaptive_width: True
+                        MDIconButton:
+                            icon: 'minus'
+                            pos_hint: {'center_y': .5, 'center_x': .5}
+                            on_press:root.decrement_counter_tow()
+                    MDLabel:
+                        id: counter_label_tow
+                        font_style: 'Subtitle2'
+                        text: '0'
+                        halign: 'center'
+                    MDBoxLayout:
+                        adaptive_width: True
+                        MDIconButton:
+                            icon: 'plus'
+                            pos_hint: {'center_y': .5, 'center_x': .5}
+                            on_press:root.increment_counter_tow()
+            MDCard:
+                elevation: 1.6
+                border_radius: 15
+                radius: [15]
+                size_hint: None, None
+                pos_hint: {'center_x': 0.8,'center_y': .22}
+                size: (dp(120), dp(35))
+                MDGridLayout:
+                    cols: 3
+                    MDBoxLayout:
+                        adaptive_width: True
+                        MDIconButton:
+                            icon: 'minus'
+                            pos_hint: {'center_y': .5, 'center_x': .5}
+                            on_press: root.decrement_counter_three()
+                    MDLabel:
+                        id: counter_label_three
+                        font_style: 'Subtitle2'
+                        text: '- , +'
+                        halign: 'center'
+                    MDBoxLayout:
+                        adaptive_width: True
+                        MDIconButton:
+                            icon: 'plus'
+                            pos_hint: {'center_y': .5, 'center_x': .5}
+                            on_press: root.increment_counter_three()
